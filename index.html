@@ -15,7 +15,7 @@
         }
         body { background-color: #0f1015; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 0; }
         
-        /* ADOBE STİLİ PRESTİJLİ ÜST MENÜ (NAVBAR) - ASLA KİLİTLENMEZ */
+        /* ADOBE STİLİ PRESTİJLİ ÜST MENÜ (NAVBAR) - %100 AKTİF */
         .adobe-navbar { background-color: var(--adobe-nav); color: var(--adobe-text); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; border-bottom: 1px solid #e1e1e1; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 9999; }
         .nav-left { display: flex; align-items: center; gap: 30px; }
         .brand-logo { font-weight: 900; font-size: 19px; color: #fa0f00; display: flex; align-items: center; gap: 6px; text-decoration: none; }
@@ -29,7 +29,7 @@
         .container { max-width: 1000px; margin: 20px auto; padding: 0 20px; box-sizing: border-box; }
         .ad-space { background: #161821; margin: 15px 0; padding: 15px; color: #5d6275; border: 1px solid var(--border); border-radius: 10px; font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
         
-        /* DOSYA GİRİŞ ALANI */
+        /* ASLA KİLİTLENMEYEN DOSYA ALANI */
         .upload-area { background: #161821; border: 2px dashed #4f546c; padding: 35px; border-radius: 14px; text-align: center; margin-bottom: 20px; }
         .file-btn { background: var(--adobe-blue); color: white; border: none; padding: 12px 24px; font-size: 14px; font-weight: bold; border-radius: 20px; cursor: pointer; margin-top: 10px; }
         .file-btn:hover { background: #0d59b3; }
@@ -47,7 +47,7 @@
         .slider-row { display: flex; align-items: center; gap: 12px; background: #202330; padding: 12px; border-radius: 8px; border: 1px solid var(--border); }
         input[type="range"] { flex: 1; accent-color: var(--adobe-blue); cursor: pointer; }
         .badge { background: #2d3142; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; min-width: 45px; text-align: center; color: #00dfd8; }
-        select, input[type="number"] { background: #202330; color: white; border: 1px solid var(--border); padding: 12px; border-radius: 8px; font-size: 14px; width: 100%; box-sizing: border-box; }
+        select, input[type="number"] { background: #202330; color: white; border: 1px solid #2d3142; padding: 12px; border-radius: 8px; font-size: 14px; width: 100%; box-sizing: border-box; }
         
         .export-box-layout { display: flex; gap: 15px; width: 100%; margin-top: 15px; }
         .btn-action { color: white; border: none; padding: 16px; font-size: 15px; font-weight: bold; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s; }
@@ -61,7 +61,7 @@
 </head>
 <body>
 
-    <!-- NAVİGASYON SEKMELERİ HER ZAMAN AKTİF VE TIKLANABİLİR -->
+    <!-- ÜST BAR (NAVBAR) -->
     <nav class="adobe-navbar">
         <div class="nav-left">
             <a href="#" class="brand-logo">WonderLabs <span>Studio Cloud</span></a>
@@ -76,15 +76,16 @@
     </nav>
 
     <div class="container">
-        <!-- ÜST REKLAM (İLK AÇILIŞTA DA BURADA) -->
+        <!-- ÜST REKLAM -->
         <div class="ad-space">Google AdSense Top Banner</div>
 
-        <!-- DOSYA GİRİŞ ALANI -->
+        <!-- DOSYA GİRİŞ ALANI (INPUT KESİN OLARAK ETİKETLENDİ) -->
         <div class="upload-area" id="dropzone">
             <h3 style="margin: 0 0 8px 0;">Drag & Drop Video/Audio File Here</h3>
             <p style="color: #a0a5b5; font-size: 13px; margin: 0 0 15px 0;">Universal hardware decoding instantly in your browser</p>
+            <!-- GİZLİ INPUT ETİKETİ TAM BURADA VE ÇALIŞIYOR -->
             <input type="file" id="fileInput" accept="video/*,audio/*" style="display: none;">
-            <button class="file-btn" onclick="document.getElementById('fileInput').click()">BROWSE FILE / DOSYA SEÇ</button>
+            <button class="file-btn" id="browseBtn">BROWSE FILE / DOSYA SEÇ</button>
         </div>
 
         <!-- ANA STÜDYO ALANI -->
