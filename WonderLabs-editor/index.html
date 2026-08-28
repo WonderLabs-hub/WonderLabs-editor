@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderLabs - Media Editor</title>
+    <!-- SİTE İKONU (FAVICON) ETİKETİ -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body { background-color: #121212; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        .upload-box { border: 3px dashed #444; padding: 50px; border-radius: 10px; cursor: pointer; background: #1e1e1e; margin-top: 20px; }
+        .upload-box:hover { border-color: #0070f3; }
+        .ad-space { background: #222; margin: 30px 0; padding: 20px; color: #666; border: 1px solid #333; font-weight: bold; }
+        video, audio { width: 100%; margin-top: 20px; display: none; background: black; border-radius: 8px; }
+        .lang-selector { margin-bottom: 20px; background: #222; color: white; padding: 5px 10px; border: 1px solid #444; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Dil Değiştirme Butonu (Manuel Seçim İçin) -->
+        <select id="langSelect" class="lang-selector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="tr">Türkçe</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <h1 id="mainTitle">WonderLabs Media Editor</h1>
+        <p id="mainDesc">No downloads. No limits. Pure browser-powered free editing.</p>
+        
+        <div class="ad-space" id="adTop">Google AdSense Top Banner</div>
+
+        <div class="upload-box" id="dropzone">
+            <h3 id="dropTitle">Drop or Select Your Video / Audio File Here</h3>
+            <p id="dropDesc">(Supports MKV, AVI, MP4, MOV, MP3, WAV)</p>
+            <input type="file" id="fileInput" accept="video/*,audio/*" style="display:none;">
+        </div>
+
+        <video id="videoPlayer" controls></video>
+        <audio id="audioPlayer" controls></audio>
+
+        <div class="ad-space" id="adBottom">Google AdSense Bottom Banner</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
